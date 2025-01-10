@@ -1,0 +1,21 @@
+public class Animal {
+    public void makeSound() {
+        System.out.println("Some animal sound");
+    }
+}
+class Lion extends Animal {
+    @Override
+    public void makeSound() {
+        System.out.println("Rawrrr! Rawrrr!");
+    }
+}
+public class Main {
+    public static void animalSound(Animal animal) {
+        animal.makeSound();
+    }
+
+    public static void main(String[] args) {
+        Lion lion = new Lion();
+        animalSound(lion); // Outputs: Rawrrr! Rawrrr!
+    }
+}
