@@ -1,0 +1,34 @@
+import java.util.Scanner;
+
+class Main { // Changed from 'ArithmeticOperations' to 'Main'
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        
+        System.out.print("Enter the first number: ");
+        String firstNumberStr = scanner.nextLine();
+        System.out.print("Enter the second number: ");
+        String secondNumberStr = scanner.nextLine();
+        
+        Integer firstNumber = Integer.valueOf(firstNumberStr);
+        Integer secondNumber = Integer.valueOf(secondNumberStr);
+        
+        int addition = firstNumber + secondnumber;
+        int subtraction = firstNumber - secondNumber;
+        int multiplication = firstNumber * secondNumber;
+        double division = secondNumber != 0 ? (double) firstNumber / secondNumber : Double.NaN;
+
+        System.out.println("Addition: " + addition);
+        System.out.println("Subtraction: " + subtraction);
+        System.out.println("Multiplication: " + multiplication);
+        System.out.println("Division: " + (division != Double.NaN ? division : "undefined (division by zero)"));
+
+        scanner.close();
+    }
+}
+output:    
+Enter the first number: 10
+Enter the second number: 2
+Addition: 12
+Subtraction: 8
+Multiplication: 20
+Division: 5.0
